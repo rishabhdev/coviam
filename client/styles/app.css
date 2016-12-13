@@ -77,3 +77,42 @@
 .clicked{
     color: #550000;
 }
+.pointsWrapper,.flier{
+    display: inline-block;
+
+}
+.pointsWrapper{
+    position: relative;
+}
+.flierWrapper{
+    opacity:0;
+    position:absolute;
+    width: 20px;
+    height: 20px;
+}
+.flier {
+
+    -webkit-animation-name: pointsAnimation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: pointsAnimation;
+    animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes pointsAnimation {
+    from {left:100px;top:-20px;opacity:1;width:60px;height:60px;font-size:40px}
+    to {left:0px ;top:0px;display:none;z-index:20;opacity:0;width:20px;height: 20px;font-size:15px}
+
+}
+
+/* Standard syntax */
+@keyframes pointsAnimation {
+    from {left:100px;top:-20px;opacity:1;width:60px;height:60px;font-size:40px}
+    to {left:0px ;top:0px;display:none;z-index:20;opacity:0;width:20px;height: 20px;font-size:15px}
+}
+.greenText{
+    color: green;
+}
+.redText{
+    color:red;
+}
