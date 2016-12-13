@@ -1,0 +1,57 @@
+<div ng-controller="mainCtrl">
+<div class="container mainWrapper">
+<div class="row">
+    <div class="col-xs-5">
+    <table class="mainTable">
+        <tr>
+            <td><puzzle-cell click-action="onCellClick('00')" open-cells="openCells" icons="assignedIcons" cell-id="'00'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('01')" open-cells="openCells" icons="assignedIcons" cell-id="'01'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('02')" open-cells="openCells" icons="assignedIcons" cell-id="'02'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('03')" open-cells="openCells" icons="assignedIcons" cell-id="'03'"></puzzle-cell></td>
+        </tr>
+        <tr>
+            <td><puzzle-cell click-action="onCellClick('10')" open-cells="openCells" icons="assignedIcons" cell-id="'10'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('11')" open-cells="openCells" icons="assignedIcons" cell-id="'11'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('12')" open-cells="openCells" icons="assignedIcons" cell-id="'12'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('13')" open-cells="openCells" icons="assignedIcons" cell-id="'13'"></puzzle-cell></td>
+        </tr>
+        <tr>
+            <td><puzzle-cell click-action="onCellClick('20')" open-cells="openCells" icons="assignedIcons" cell-id="'20'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('21')" open-cells="openCells" icons="assignedIcons" cell-id="'21'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('22')" open-cells="openCells" icons="assignedIcons" cell-id="'22'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('23')" open-cells="openCells" icons="assignedIcons" cell-id="'23'"></puzzle-cell></td>
+        </tr>
+        <tr>
+            <td><puzzle-cell click-action="onCellClick('30')" open-cells="openCells" icons="assignedIcons" cell-id="'30'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('31')" open-cells="openCells" icons="assignedIcons" cell-id="'31'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('32')" open-cells="openCells" icons="assignedIcons" cell-id="'32'"></puzzle-cell></td>
+            <td><puzzle-cell click-action="onCellClick('33')" open-cells="openCells" icons="assignedIcons" cell-id="'33'"></puzzle-cell></td>
+        </tr>
+        </table>
+
+
+        </div>
+    <div class="col-xs-6">
+    <div class="infoWrapper">
+
+        <div class="row">
+            <b>Instructions:</b>
+             This is memory puzzle. Click on the tiles to reveal a picture. You have to remember the picture and the position, then find its pair.
+            For each pair you get 10 points. Mistakes cost you 5 points.<br>
+            <b>Get set go!!</b>
+            </div>
+    <div class="row">
+        Score: <span>{{points}}</span>
+    </div>
+
+     <div class="row">Your best score: {{bestScore}} </div>
+
+        <div class="row">{{message}}</div>
+        <div class="row">
+     <button ng-click="resetGame()">Restart game</button></div>
+    </div>
+        </div>
+    </div>
+</div>
+
+</div>

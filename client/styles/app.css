@@ -1,0 +1,76 @@
+.mainTable{
+
+}
+.mainTable td {
+    width:100px;
+    height: 100px;
+    background: rgba(102, 153, 153, 0.42);
+    border:1px solid white;
+    color: #003333;
+}
+
+.flipper div{
+   font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+}
+/* entire container, keeps perspective */
+.flipContainer {
+    perspective: 100px;
+    cursor: pointer;
+}
+/* flip the pane when hovered */
+ .flipperRotate{
+    transform: rotateY(180deg);
+}
+
+
+.flipContainer, .front, .back {
+    width: 100px;
+    height: 100px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+.disable {
+    background-color: grey;
+    color:white;
+    transform: scale(1,1);
+}
+.mainTable{
+    float: left;
+}
+.infoWrapper{
+    float:left;
+    margin-left: 20px;
+}
+.infoWrapper .row{
+    margin-top: 10px;
+}
+.mainWrapper{
+    margin-top: 50px;
+}
