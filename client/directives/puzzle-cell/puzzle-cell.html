@@ -1,6 +1,6 @@
 <div class="flipContainer">
     <div class="flipper" ng-click="flipperClickHandler()">
-        <div class="front" ng-class="{disable:iconObj.disable}">
+        <div class="front" ng-class="{disable:iconObj.disable,clicked:(!iconObj.disable && iconObj.count>0)}">
             <i class="fa" ng-class="{'fa-envelope':!iconObj.disable,'fa-envelope-open':iconObj.disable}" aria-hidden="true"></i>
         </div>
         <div class="back">

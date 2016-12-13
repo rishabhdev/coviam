@@ -74,3 +74,6 @@
 .mainWrapper{
     margin-top: 50px;
 }
+.clicked{
+    color: #550000;
+}
