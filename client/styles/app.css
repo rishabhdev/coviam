@@ -95,7 +95,7 @@
     -webkit-animation-name: pointsAnimation; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: pointsAnimation;
-    animation-duration: 1s;
+    animation-duration: 1.4s;
 }
 
 /* Safari 4.0 - 8.0 */

@@ -13,28 +13,29 @@ angular.module('matchpairs').directive('flier',function($timeout,$rootScope){
             data:'=data'
         },
         link:function(scope,element) {
-            console.log(element);
-            console.log(scope.data);
+
             scope.$watch('data',function(val,old){
-                console.log(val);
-
                 var temp = val - old;
-                if(temp<0){
-                    scope.flierText = ''+temp;
-                    scope.increase = false;
-                }
-                else if(temp > 0){
-                    scope.flierText = '+'+temp;
-                    scope.increase = true;
-
-
-                }
                 element.removeClass('flier');
 
-                $timeout(function(){
-                    element.addClass('flier');
+                if(temp == -5){
+                    scope.flierText = ''+temp;
+                    scope.increase = false;
+                    $timeout(function(){
+                        element.addClass('flier');
 
-                },100)
+                    },100);
+                }
+                else if(temp == 10){
+                    scope.flierText = '+'+temp;
+                    scope.increase = true;
+                    $timeout(function(){
+                        element.addClass('flier');
+
+                    },100);
+                }
+
+
 
             })
         }

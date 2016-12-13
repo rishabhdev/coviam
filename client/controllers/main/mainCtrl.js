@@ -52,6 +52,8 @@ angular.module('matchpairs').controller('mainCtrl',function($scope,$timeout,$roo
             if(otherVisibleIcon.icon == iconObj.icon){
                 otherVisibleIcon.disable = true;
                 iconObj.disable = true;
+
+
                 $scope.points +=10;
             }
             else {
